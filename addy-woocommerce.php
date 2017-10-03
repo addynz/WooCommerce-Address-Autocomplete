@@ -59,7 +59,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 		);
 
 		$settings[] = array(
-			'name'     => __( 'PO Box addresses', 'text-domain' ),
+			'name'     => __( 'Exclude PO Box addresses', 'text-domain' ),
 			'id'       => 'addy-hide-postcode',
 			'type'     => 'checkbox',
 			'desc'     => __( 'Check this box if you do not ship to PO Box addresses', 'text-domain' ),
