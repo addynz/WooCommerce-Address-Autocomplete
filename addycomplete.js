@@ -50,6 +50,15 @@
                 }
             }
 
+            var createGuid = function () {
+                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                    return v.toString(16);
+                });
+            }
+
+            var sessionId = createGuid();
+
             me.setOptions = function (addressOptions) {
                 options = jQuery.extend({
                     maxResults: 10,
@@ -119,9 +128,8 @@
                 if (!addressField.val()) return;
 
                 jQuery.ajax({
-                    url: "https://www.addy.co.nz/api/addressnotfound?=" + addressField.val(),
-                    dataType: "json",
-                    headers: { "addy-api-key": apiKey },
+                    url: "https://www.addy.co.nz/api/addressnotfound?=" + addressField.val() + '&session=' + sessionId + '&key=' + apiKey,
+                    dataType: "jsonp",
                     cache: false,
                     success: function () { },
                     error: function () { },
@@ -132,9 +140,8 @@
                 loadedAddressId = id;
 
                 jQuery.ajax({
-                    url: "https://www.addy.co.nz/api/address/" + id,
-                    dataType: "json",
-                    headers: { "addy-api-key": apiKey },
+                    url: "https://www.addy.co.nz/api/address/" + id + '?session=' + sessionId + '&key=' + apiKey,
+                    dataType: "jsonp",
                     cache: false,
                     success: function (data) {
 
@@ -196,9 +203,8 @@
 
             var addressSearch = function (request, response) {
                 jQuery.ajax({
-                    url: "https://www.addy.co.nz/api/search?expostbox=" + options.excludePostBox + "&max=" + options.maxResults + "&s=" + request.term,
-                    dataType: "json",
-                    headers: { "addy-api-key": apiKey },
+                    url: "https://www.addy.co.nz/api/search?session=" + sessionId + "&key=" + apiKey + "&expostbox=" + options.excludePostBox + "&max=" + options.maxResults + "&s=" + request.term,
+                    dataType: "jsonp",
                     cache: false,
                     success: function (data) {
                         firstAddressId = 0;
