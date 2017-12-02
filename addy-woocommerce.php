@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: NZ Address Autocomplete for WooCommerce
-Version: 1.1.4
+Plugin Name: NZ Address Lookup for WooCommerce
+Version: 2.1.0
 Author: Addy Limited
 Author URI: https://www.addy.co.nz
-Description: Addy's address autocomplete will improve the speed, accuracy and customer experience of your WooCommerce checkout page.
+Description: Addy's address lookup will improve the speed, accuracy and customer experience of your WooCommerce checkout page.
 */
  
 if (!defined('ABSPATH')) {
@@ -18,10 +18,9 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 	add_action('woocommerce_after_edit_address_form_shipping', 'register_addy_complete');
  	add_action('wp_enqueue_scripts', 'add_addy_frontend_scripts');
 	
- 	function add_addy_frontend_scripts() {
- 		wp_enqueue_script('jquery');
- 		wp_enqueue_script('jquery-ui-autocomplete');
-		
+ 	function add_addy_frontend_scripts() {		
+    wp_enqueue_script('jquery');
+    
 		$addy_script_path = plugins_url('/assets/js/addycomplete.min.js', __FILE__ );
 		wp_enqueue_script('addy-script', $addy_script_path);
 								
@@ -47,7 +46,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 	function addy_settings($settings) {
 		$settings[] = array('name' => __( 'Addy Autocomplete Settings', 'text-domain' ),
 			'type' => 'title',
-			'desc' => __( 'Configure your address validation and verification settings below:', 'text-domain' ),
+			'desc' => __( 'Configure your address lookup and validation settings below:', 'text-domain' ),
 			'id' => 'addy-api-settings' );
 
 		$settings[] = array(
@@ -62,7 +61,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 			'name'     => __( 'Exclude PO Box addresses', 'text-domain' ),
 			'id'       => 'addy-hide-postcode',
 			'type'     => 'checkbox',
-			'desc'     => __( 'Check this box if you do not ship to PO Box addresses', 'text-domain' ),
+			'desc'     => __( 'Check this box if you do not deliver to PO Box addresses', 'text-domain' ),
 		);		
 
 		$settings[] = array( 'type' => 'sectionend', 'id' => 'addy-api-settings' );
