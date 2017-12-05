@@ -82,8 +82,24 @@ function initAddy() {
     loadAddyWidget("shipping");
 }
 
+function initAddyDomLoad(retries) {
+	if (retries === 0) {
+		initAddy();
+		return;
+	}
+
+	if (document.readyState === "complete") {
+		setTimeout(initAddy, 1000);
+		return;
+	}
+	
+	setTimeout(function() {
+		initAddyDomLoad(retries -1);
+	}, 1000);
+}
+
 (function () {
-    jQuery(document).ready(function () {
-        initAddy();
+    jQuery(document).ready(function () {		
+        initAddyDomLoad(6);
     });
 })();
