@@ -1,4 +1,4 @@
-=== NZ Address Autocomplete for WooCommerce ===
+=== Addy's NZ Address Autocomplete for WooCommerce ===
 
 Contributors: addy.co.nz
 Tags: WooCommerce, addy, address autocomplete, address validation, new zealand, nz
@@ -8,7 +8,7 @@ Stable tag: 2.1.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Address autocomplete will validate and suggest addresses as a user types to make online checkouts fast, easy and accurate. 
+Addy's NZ Address Autocomplete will validate and suggest addresses as a user types to make online checkouts fast, easy and accurate. 
 
 == Description ==
 

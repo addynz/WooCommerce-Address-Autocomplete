@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: NZ Address Autocomplete for WooCommerce
+Plugin Name: Addy's NZ Address Autocomplete for WooCommerce
 Version: 2.1.0
 Author: Addy Limited
 Author URI: https://www.addy.co.nz
@@ -44,17 +44,18 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 	}
 
 	function addy_settings($settings) {
-		$settings[] = array('name' => __( 'Addy Autocomplete Settings', 'text-domain' ),
+		$settings[] = array('name' => __( 'Addy\'s NZ Address Autocomplete Settings', 'text-domain' ),
 			'type' => 'title',
-			'desc' => __( 'Configure your address lookup and validation settings below:', 'text-domain' ),
+			'desc' => __( 'Configure your address autocomplete and validation settings below:', 'text-domain' ),
 			'id' => 'addy-api-settings' );
 
 		$settings[] = array(
 			'name'     => __( 'Addy API Key', 'text-domain' ),
-			'desc_tip' => __( 'Get your free Addy API Key from www.addy.co.nz', 'text-domain' ),
+			'desc_tip' => __( 'Get your Addy API Key from www.addy.co.nz', 'text-domain' ),
 			'id'       => 'addy-api-key',
 			'type'     => 'text',
-			'desc'     => __( 'Get your free Addy API key from <a href="https://www.addy.co.nz/signup" target="_blank">www.addy.co.nz</a>', 'text-domain' ),
+      'default'  => __( 'demo-api-key', 'text-domain' ),
+			'desc'     => __( 'Get your Addy API key from <a href="https://www.addy.co.nz/signup" target="_blank">www.addy.co.nz</a> or use the demo key \'demo-api-key\'.', 'text-domain' ),
 		);
 
 		$settings[] = array(
