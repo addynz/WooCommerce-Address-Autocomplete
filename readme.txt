@@ -1,54 +1,34 @@
-=== NZ Address Lookup for WooCommerce ===
+=== NZ Address Autocomplete for WooCommerce ===
 
 Contributors: addy.co.nz
-Tags: WooCommerce, addy, address lookup, address validation, address verification, autocomplete, address finder, new zealand, nz, shipping
+Tags: WooCommerce, addy, address autocomplete, address validation, new zealand, nz
 Requires at least: 4.1
 Tested up to: 4.9.1
 Stable tag: 2.1.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Addy's address autocomplete uses the latest address data from official sources with advanced search methods to improve the speed, accuracy and customer experience of your WooCommerce checkout page.
+Address autocomplete will validate and suggest addresses as a user types to make online checkouts fast, easy and accurate. 
 
 == Description ==
 
-With Addy, you can validate and get the right address data at the point of capture, reducing the need to clean it once it's in your database.  Reduce cost by delivering first time, every time.
-
-Completing billing and shipping address details is often seen as a friction point in online shopping. 
-It takes up time and is even worse when completing an order from a small smartphone. 
-Hence the reason for cart abandonment.
-
-WooCommerce retailers have the opportunity to turn a pain point into a selling point.  
-Usability research shows that address autocomplete with type-ahead verification, improves speed 
-and accuracy that will leave shoppers feeling positive about their checkout experience.
-
-= Validate addresses with accuracy as you type =
-Customers can complete orders faster and addresses are validated in real-time against official NZ Post and LINZ databases.  
-This will allow you to increase your online sales and reduce orders containing incomplete or undeliverable shipping details.
- 
-= Solve shipping issues = 
-Addy uses advanced fuzzy error correction to ensure that addresses can be found and populated quickly and accurately. 
-This means that if a typo, invalid suburb or partially correct address is entered, your customers can still find the right 
-delivery or billing address because the addresses are validated against actual delivery point data from official 
-address sources, including the New Zealand Postal Address File (PAF).
+* Customer Satisfaction - fast and easy address entry saves users' time and increases conversions
+* Business Efficiency - accurate addresses reduce support cost and improves first time deliveries
+* Accurate Matching – smart suggestions with fuzzy matching that will correct typos and mistakes
+* Data Quality – maintain an accurate customer database for better decision-making and marketing communication
+* Freshest Data – the latest address data sourced from New Zealand Post, LINZ and more
+* Easy Integration - start capturing addresses within minutes
 
 = Improve the customer experience on mobile and desktop devices = 
 Addy works across devices with internet access, from computers and tablets to smartphones.
 Customers love the ease and speed that Addy delivers. Addy makes placing orders on both desktop and mobile devices fast and accurate.
  
-= Configured in minutes =
-Getting Addy on your WooCommerce site couldn't be easier.  Install the plugin, apply your free address key and you're done!
+= Pricing =
+No setup cost, no long term contracts and no credit card required. 
 
-= Great value =
-There are no setup cost, no long term contract and no credit card required to use Addy. 
+Addy offer 1,500 free completed address requests per month and pay as you go for additional monthly used addresses.  
 
-Addy offer 1,500 free completed address requests per month.  
-
-Addy doesn't restrict access if you have a busy month.  You only get invoiced for additional completed address requests that you use.  
-
-Visit the pricing page for more information and to find a plan that works for your business (https://www.addy.co.nz/pricing).
-
-== Try it today - both you and your customers will love Addy! ==
+Visit the pricing page to find a plan that works for your business (https://www.addy.co.nz/pricing).
 
 = Compatibility =
 
@@ -59,27 +39,15 @@ Visit the pricing page for more information and to find a plan that works for yo
 
 = Installed in minutes =
 
-Creating a delightful checkout experience on your WooCommerce site with fast and accurate address autocomplete technology couldn't be easier:
+Follow the steps below to install the address autocomplete plugin:
 
 1. From the the Wordpress Admin Menu, click on Plugins > Add New
-2. Search for `NZ Address Autocomplete for WooCommerce`
+2. Search for 'NZ Address Autocomplete for WooCommerce'
 3. Click on the 'Install Now' button
 4. Activate the plugin through the Plugins page in WordPress
-5. Use the WooCommerce > Settings > Checkout page to enter your free API key
-
-= Create your free account =
-
-Leave your customers with the impression that you care.  
-You value people's time, you are committed to service, and you will go the extra mile by leveraging technology to make life easy for your customers.  
-Positive customer experiences make a shopper more likely to return, foster loyalty and help with the long-term success of an online business.
-
-Make an intelligent business decision and register for a free account today.
-
-No setup fee. No fixed contracts. No credit card required. 
+5. Use the WooCommerce > Settings > Checkout page to enter your API key
 
 * [Create a Free Account](https://www.addy.co.nz/signup)
-
-Already have an account? [Login](https://www.addy.co.nz/login) to Addy and to grab your API key.
 
 == Frequently Asked Questions ==
 
@@ -92,9 +60,13 @@ Addy's WooCommerce plugin provides the following features:
 
 = How much does it cost? =
 
-Addy offers 1,500 free completed address requests per month with no advertisements or limits.
+Addy offers 1,500 free completed address requests per month with no advertisements.
 
 Visit the pricing page for more information and to find a plan that works for your business (https://www.addy.co.nz/pricing).
+
+= What is a completed address request? =
+
+A completed address is counted when a user selects an address from the predictive address suggestion drop-down to populate all of the address fields such as number, street, suburb, city and postcode.
 
 = More FAQ questions and answers
 

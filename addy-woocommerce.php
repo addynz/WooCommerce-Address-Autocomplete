@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: NZ Address Lookup for WooCommerce
+Plugin Name: NZ Address Autocomplete for WooCommerce
 Version: 2.1.0
 Author: Addy Limited
 Author URI: https://www.addy.co.nz
-Description: Addy's address lookup will improve the speed, accuracy and customer experience of your WooCommerce checkout page.
+Description: Address autocomplete will validate and suggest addresses as a user types to make online checkouts fast, easy and accurate. 
 */
  
 if (!defined('ABSPATH')) {
