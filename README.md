@@ -29,13 +29,7 @@ Customers love the ease and speed that Addy delivers. Addy makes placing orders 
 ## Configured in minutes
 Getting Addy on your WooCommerce site couldn't be easier.  Install the plugin, apply your free address key and you're done!
 
-## Great value
-There are no setup cost, no long term contract and no credit card required to use Addy. 
-
-Addy offer 1,500 free completed address requests per month.  
-
-Addy doesn't restrict access if you have a busy month.  You only get invoiced for additional completed address requests that you use.  
-
+## Pricing
 Visit the pricing page for more information and to find a plan that works for your business (https://www.addy.co.nz/pricing).
 
 # Compatibility
