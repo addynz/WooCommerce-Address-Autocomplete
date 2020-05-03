@@ -26,7 +26,7 @@ Customers love the ease and speed that Addy delivers. Addy makes placing orders 
 = Pricing =
 No setup cost, no long term contracts and no credit card required. 
 
-Addy offer 1,500 free completed address requests per month and pay as you go for additional monthly used addresses.  
+Addy offer 500 free completed address requests per month and pay as you go for additional monthly used addresses.  
 
 Visit the pricing page to find a plan that works for your business (https://www.addy.co.nz/pricing).
 
@@ -60,7 +60,7 @@ Addy's WooCommerce plugin provides the following features:
 
 = How much does it cost? =
 
-Addy offers 1,500 free completed address requests per month with no advertisements.
+Addy offers 500 free completed address requests per month with no advertisements.
 
 Visit the pricing page for more information and to find a plan that works for your business (https://www.addy.co.nz/pricing).
 
