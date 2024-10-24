@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Addy's NZ Address Autocomplete for WooCommerce
-Version: 2.1.0
+Version: 2.1.1
 Author: Addy Limited
 Author URI: https://www.addy.co.nz
 Description: Address autocomplete will validate and suggest addresses as a user types to make online checkouts fast, easy and accurate. 
@@ -55,7 +55,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 			'id'       => 'addy-api-key',
 			'type'     => 'text',
       'default'  => __( 'demo-api-key', 'text-domain' ),
-			'desc'     => __( 'Get your Addy API key from <a href="https://www.addy.co.nz/signup" target="_blank">www.addy.co.nz</a> or use the demo key \'demo-api-key\'.', 'text-domain' ),
+			'desc'     => __( 'Please, get your Addy API key from <a href="https://www.addysolutions.com" target="_blank">www.addysolutions.com</a> first, if you have not already.', 'text-domain' ),
 		);
 
 		$settings[] = array(
