@@ -1,0 +1,9 @@
+{
+  "name": "Addy's NZ Address Autocomplete for WooCommerce",
+  "version": "3.0.0",
+  "description": "Address autocomplete for billing and shipping addresses on the checkout page.",
+  "author": "stenly311",
+  "settings": {    
+    "enable_feature": true
+  }
+}

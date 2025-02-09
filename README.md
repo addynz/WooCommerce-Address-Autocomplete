@@ -1,52 +1,61 @@
-# WooCommerce Address Autocomplete Plugin by Addy.co.nz
+# NZ Address Autocomplete for WooCommerce 3.0.0
 
-https://www.addy.co.nz/
+- Compatibility issue fix found with WP 6.6+
+- Improved address field compatibility by supporting both underscore-based and dash-based selectors.
+- Address data now updates instantly in WooCommerce Blocks, ensuring real-time UI changes.
+- Enhanced event triggering, ensuring "input" and "change" events fire for all form listeners.
+- New helper functions for consistent field value retrieval, updates, and event dispatching.
+- Optimized checkout field updates, including custom region matching and immediate WooCommerce store synchronization.
+- API updates now ensure seamless address persistence and UI consistency during checkout. 
 
-With Addy, you can validate and get the right address data at the point of capture, reducing the need to clean it once it's in your database.  Reduce cost by delivering first time, every time.
+# NZ Address Autocomplete for WooCommerce 2.3.0
 
-Completing billing and shipping address details is often seen as a friction point in online shopping. 
-It takes up time and is even worse when completing an order from a small smartphone. 
-Hence the reason for cart abandonment.
+- Adding Html DOM mapping for 'suburb' field from API response payload
 
-WooCommerce retailers have the opportunity to turn a pain point into a selling point.  
-Usability research shows that address autocomplete with type-ahead verification, improves speed 
-and accuracy that will leave shoppers feeling positive about their checkout experience.
+# NZ Address Autocomplete for WooCommerce 2.1.8
 
-## Validate addresses with accuracy as you type
-Customers can complete orders faster and addresses are validated in real-time against official NZ Post and LINZ databases.  
-This will allow you to increase your online sales and reduce orders containing incomplete or undeliverable shipping details.
+- Amended the number of free calls applicable to new accounts in documentation
 
-## Solve shipping issues
-Addy uses advanced fuzzy error correction to ensure that addresses can be found and populated quickly and accurately. 
-This means that if a typo, invalid suburb or partially correct address is entered, your customers can still find the right 
-delivery or billing address because the addresses are validated against actual delivery point data from official 
-address sources, including the New Zealand Postal Address File (PAF).
+# NZ Address Autocomplete for WooCommerce 2.1.7
 
-## Improve the customer experience on mobile and desktop devices
-Addy works across devices with internet access, from computers and tablets to smartphones.
-Customers love the ease and speed that Addy delivers. Addy makes placing orders on both desktop and mobile devices fast and accurate.
+- Upgraded to the latest widget
 
-## Configured in minutes
-Getting Addy on your WooCommerce site couldn't be easier.  Install the plugin, apply your free address key and you're done!
+# NZ Address Autocomplete for WooCommerce 2.1.6
 
-## Pricing
-Visit the pricing page for more information and to find a plan that works for your business (https://www.addy.co.nz/pricing).
+- Increased performance
 
-# Compatibility
+# NZ Address Autocomplete for WooCommerce 2.1.5
 
-* Wordpress v4.1 or higher
-* WooCommerce v2.3 or higher
+- Fixed an issue where the Region drop-down resized
 
-# Create your free account
+# NZ Address Autocomplete for WooCommerce 2.1.4
 
-Leave your customers with the impression that you care.  
-You value people's time, you are committed to service, and you will go the extra mile by leveraging technology to make life easy for your customers.  
-Positive customer experiences make a shopper more likely to return, foster loyalty and help with the long-term success of an online business.
+- Removed the invalid warning message
 
-Make an intelligent business decision and register for a free account today.
+# NZ Address Autocomplete for WooCommerce 2.1.3
 
-No setup fee. No fixed contracts. No credit card required. 
+- Updated the Address API URL to https://api.addy.co.nz/
 
-* [Create a Free Account](https://www.addy.co.nz/signup)
+# NZ Address Autocomplete for WooCommerce 2.1.2
 
-Already have an account? [Login](https://www.addy.co.nz/login) to Addy and to grab your API key.
+- Call update events when an address is auto-completed
+
+# NZ Address Autocomplete for WooCommerce 2.1.1
+
+- Added additional filters and configuration options
+
+# NZ Address Autocomplete for WooCommerce 2.1.0.2
+
+- Use Mailtown instead of City by default
+
+# NZ Address Autocomplete for WooCommerce 2.1.0.2
+
+- Fixed start-up bug
+
+# NZ Address Autocomplete for WooCommerce 2.1.0
+
+- Added the ability to filter PO Boxes addresses
+
+# NZ Address Autocomplete for WooCommerce 2.0.0
+
+- Addy, proudly made out of Auckland, New Zealand
