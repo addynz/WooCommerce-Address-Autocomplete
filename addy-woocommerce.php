@@ -52,7 +52,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 	}
 
 
-	add_filter('woocommerce_get_settings_checkout', 'addy_settings', 10, 1);
+	add_filter('woocommerce_get_settings_general', 'addy_settings', 10, 1);
 
 	function addy_settings($settings) {
 		$settings[] = array('name' => __( 'Addy\'s NZ Address Autocomplete Settings', 'text-domain' ),
