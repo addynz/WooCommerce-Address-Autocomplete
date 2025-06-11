@@ -46,7 +46,7 @@ Follow the steps below to install the address autocomplete plugin:
 2. Search for 'NZ Address Autocomplete for WooCommerce'
 3. Click on the 'Install Now' button
 4. Activate the plugin through the Plugins page in WordPress
-5. Use the WooCommerce > Settings > Checkout or Payments page to enter your API key
+5. Use the WooCommerce > Settings > General page to enter your API key
 
 For additional instructions with screenshots, visit: 
 [https://www.addysolutions.com/services/woocommerce](https://www.addysolutions.com/services/woocommerce)
@@ -77,6 +77,8 @@ A completed address is counted when a user selects an address from the predictiv
 Addy's [FAQ page](https://www.addysolutions.com/frequently-asked-questions) contains a complete list of questions and answers.
 
 == Changelog ==
+= 3.1.0 =
+* Addy plugin configuration settings have been moved to the WooCommerce General section.
 = 3.0.0 =
 * Compatibility issue fix found with WP 6.6+
 * Improved address field compatibility by supporting both underscore-based and dash-based selectors.

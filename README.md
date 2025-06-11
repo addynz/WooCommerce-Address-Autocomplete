@@ -1,3 +1,6 @@
+# NZ Address Autocomplete for WooCommerce 3.1.0
+- Addy plugin configuration settings have been moved to the WooCommerce General section.
+
 # NZ Address Autocomplete for WooCommerce 3.0.0
 
 - Compatibility issue fix found with WP 6.6+
