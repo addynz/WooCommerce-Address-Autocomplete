@@ -1,3 +1,6 @@
+# NZ Address Autocomplete for WooCommerce 3.1.1 
+- Addy plugin minor metadata fix
+
 # NZ Address Autocomplete for WooCommerce 3.1.0
 - Addy plugin configuration settings have been moved to the WooCommerce General section.
 
