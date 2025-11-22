@@ -5,7 +5,7 @@ Author: stenly311
 Tags: WooCommerce, AddySolutions, address autocomplete, address validation, New Zealand
 Requires at least: 6.8
 Tested up to: 6.8.3
-Stable tag: 3.1.2
+Stable tag: 3.1.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -77,9 +77,11 @@ A completed address is counted when a user selects an address from the predictiv
 Addy's [FAQ page](https://www.addysolutions.com/frequently-asked-questions) contains a complete list of questions and answers.
 
 == Changelog ==
-= 3.1.2 =
+= 3.1.3 =
 * Resolved an issue where Billing and Shipping address fields were populated with identical data
 * Enhanced data synchronization and improved plugin behaviour when the component becomes unsubscribed due to Rack WP rendering
+= 3.1.2 =
+* No code change, this release is to fix the Plugin upgrade process
 = 3.1.1 =
 * Addy plugin minor metadata fix
 = 3.1.0 =
