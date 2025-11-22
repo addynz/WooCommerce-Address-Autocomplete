@@ -1873,6 +1873,9 @@ https://github.com/AbleTech/neat-complete/blob/develop/LICENSE.md
     }
     return "";
   }
+  function selectAddressValue(shouldFromFetchDatasource, fetchedDataSource, formDataSource){
+    return shouldFromFetchDatasource ? fetchedDataSource : formDataSource;
+  }
   
   // Helper: Set the field value in both underscore and dash selectors.
   function setFieldValue(selectorUnderscore, selectorDash, value) {
@@ -1925,41 +1928,131 @@ https://github.com/AbleTech/neat-complete/blob/develop/LICENSE.md
     }
   
     // --- 2. Build updated billing and shipping objects using Addy data or current values ---
+    var isBilling = addyComplete.widget.element.id.startsWith("billing");
+
     var newBilling = {
-      first_name: address.first_name || getFieldValue("#billing_first_name", "#billing-first_name"),
-      last_name:  address.last_name  || getFieldValue("#billing_last_name", "#billing-last_name"),
-      company:    address.company    || getFieldValue("#billing_company", "#billing-company"),
-      address_1:  address.displayline || getFieldValue("#billing_address_1", "#billing-address_1"),
-      address_2:  address.address2   || getFieldValue("#billing_address_2", "#billing-address_2"),
-      city:       address.city       || getFieldValue("#billing_city", "#billing-city"),
-      state:      address.state      || getFieldValue("#billing_state", "#billing-state"),
-      postcode:   address.postcode   || getFieldValue("#billing_postcode", "#billing-postcode"),
-      country:    address.country    || getFieldValue("#billing_country", "#billing-country") || "NZ",
-      email:      address.email      || getFieldValue("#billing_email", "#billing-email"),
-      phone:      address.phone      || getFieldValue("#billing_phone", "#billing-phone")
+      first_name: selectAddressValue(
+        isBilling,
+        address.first_name || getFieldValue("#billing_first_name", "#billing-first_name"),
+        getFieldValue("#billing_first_name", "#billing-first_name")
+      ),
+      last_name: selectAddressValue(
+        isBilling,
+        address.last_name || getFieldValue("#billing_last_name", "#billing-last_name"),
+        getFieldValue("#billing_last_name", "#billing-last_name")
+      ),
+      company: selectAddressValue(
+        isBilling,
+        address.company || getFieldValue("#billing_company", "#billing-company"),
+        getFieldValue("#billing_company", "#billing-company")
+      ),
+      address_1: selectAddressValue(
+        isBilling,
+        address.displayline || getFieldValue("#billing_address_1", "#billing-address_1"),
+        getFieldValue("#billing_address_1", "#billing-address_1")
+      ),
+      address_2: selectAddressValue(
+        isBilling,
+        address.address2 || getFieldValue("#billing_address_2", "#billing-address_2"),
+        getFieldValue("#billing_address_2", "#billing-address_2")
+      ),
+      city: selectAddressValue(
+        isBilling,
+        address.city || getFieldValue("#billing_city", "#billing-city"),
+        getFieldValue("#billing_city", "#billing-city")
+      ),
+      state: selectAddressValue(
+        isBilling,
+        address.state || getFieldValue("#billing_state", "#billing-state"),
+        getFieldValue("#billing_state", "#billing-state")
+      ),
+      postcode: selectAddressValue(
+        isBilling,
+        address.postcode || getFieldValue("#billing_postcode", "#billing-postcode"),
+        getFieldValue("#billing_postcode", "#billing-postcode")
+      ),
+      country: selectAddressValue(
+        isBilling,
+        address.country || getFieldValue("#billing_country", "#billing-country") || "NZ",
+        getFieldValue("#billing_country", "#billing-country") || "NZ"
+      ),
+      email: selectAddressValue(
+        isBilling,
+        address.email || getFieldValue("#billing_email", "#billing-email"),
+        getFieldValue("#billing_email", "#billing-email")
+      ),
+      phone: selectAddressValue(
+        isBilling,
+        address.phone || getFieldValue("#billing_phone", "#billing-phone"),
+        getFieldValue("#billing_phone", "#billing-phone")
+      )
     };
   
+    var isShipping = addyComplete.widget.element.id.startsWith("shipping");
+
     var newShipping = {
-      first_name: address.first_name || getFieldValue("#shipping_first_name", "#shipping-first_name"),
-      last_name:  address.last_name  || getFieldValue("#shipping_last_name", "#shipping-last_name"),
-      company:    address.company    || getFieldValue("#shipping_company", "#shipping-company"),
-      address_1:  address.displayline || getFieldValue("#shipping_address_1", "#shipping-address_1"),
-      address_2:  address.address2   || getFieldValue("#shipping_address_2", "#shipping-address_2"),
-      city:       address.city       || getFieldValue("#shipping_city", "#shipping-city"),
-      state:      address.state      || getFieldValue("#shipping_state", "#shipping-state"),
-      postcode:   address.postcode   || getFieldValue("#shipping_postcode", "#shipping-postcode"),
-      country:    address.country    || getFieldValue("#shipping_country", "#shipping-country") || "NZ",
-      phone:      address.phone      || getFieldValue("#shipping_phone", "#shipping-phone")
+      first_name: selectAddressValue(
+        isShipping,
+        address.first_name || getFieldValue("#shipping_first_name", "#shipping-first_name"),
+        getFieldValue("#shipping_first_name", "#shipping-first_name")
+      ),
+      last_name: selectAddressValue(
+        isShipping,
+        address.last_name || getFieldValue("#shipping_last_name", "#shipping-last_name"),
+        getFieldValue("#shipping_last_name", "#shipping-last_name")
+      ),
+      company: selectAddressValue(
+        isShipping,
+        address.company || getFieldValue("#shipping_company", "#shipping-company"),
+        getFieldValue("#shipping_company", "#shipping-company")
+      ),
+      address_1: selectAddressValue(
+        isShipping,
+        address.displayline || getFieldValue("#shipping_address_1", "#shipping-address_1"),
+        getFieldValue("#shipping_address_1", "#shipping-address_1")
+      ),
+      address_2: selectAddressValue(
+        isShipping,
+        address.address2 || getFieldValue("#shipping_address_2", "#shipping-address_2"),
+        getFieldValue("#shipping_address_2", "#shipping-address_2")
+      ),
+      city: selectAddressValue(
+        isShipping,
+        address.city || getFieldValue("#shipping_city", "#shipping-city"),
+        getFieldValue("#shipping_city", "#shipping-city")
+      ),
+      state: selectAddressValue(
+        isShipping,
+        address.state || getFieldValue("#shipping_state", "#shipping-state"),
+        getFieldValue("#shipping_state", "#shipping-state")
+      ),
+      postcode: selectAddressValue(
+        isShipping,
+        address.postcode || getFieldValue("#shipping_postcode", "#shipping-postcode"),
+        getFieldValue("#shipping_postcode", "#shipping-postcode")
+      ),
+      country: selectAddressValue(
+        isShipping,
+        address.country || getFieldValue("#shipping_country", "#shipping-country") || "NZ",
+        getFieldValue("#shipping_country", "#shipping-country") || "NZ"
+      ),
+      phone: selectAddressValue(
+        isShipping,
+        address.phone || getFieldValue("#shipping_phone", "#shipping-phone"),
+        getFieldValue("#shipping_phone", "#shipping-phone")
+      )
     };
   
     // --- 3. Assign new values to visible checkout fields ---
-    setFieldValue("#billing_address_1", "#billing-address_1", newBilling.address_1);
-    setFieldValue("#billing_address_2", "#billing-address_2", newBilling.address_2);
-    setFieldValue("#billing_city", "#billing-city", newBilling.city);
-    setFieldValue("#billing_postcode", "#billing-postcode", newBilling.postcode);
+    if(isBilling){
+      setFieldValue("#billing_address_1", "#billing-address_1", newBilling.address_1);
+      setFieldValue("#billing_address_2", "#billing-address_2", newBilling.address_2);
+      setFieldValue("#billing_city", "#billing-city", newBilling.city);
+      setFieldValue("#billing_postcode", "#billing-postcode", newBilling.postcode);
+    }
     // For the custom region, update if available.
     if (this.customRegion) {
-      this.customRegion.value = newBilling.state;
+      this.customRegion.value = isBilling ? newBilling.state : newShipping.state;
     }
   
     // --- 4. Log form data (optional) ---
@@ -1967,10 +2060,18 @@ https://github.com/AbleTech/neat-complete/blob/develop/LICENSE.md
     // console.log("Form data after assignment:", form.serialize());
   
     // --- 5. Trigger native events on the updated fields ---
-    triggerForField("#billing_address_1", "#billing-address_1");
-    triggerForField("#billing_address_2", "#billing-address_2");
-    triggerForField("#billing_city", "#billing-city");
-    triggerForField("#billing_postcode", "#billing-postcode");
+    if(isBilling){
+      triggerForField("#billing_address_1", "#billing-address_1");
+      triggerForField("#billing_address_2", "#billing-address_2");
+      triggerForField("#billing_city", "#billing-city");
+      triggerForField("#billing_postcode", "#billing-postcode");
+    }
+    if(isShipping){
+      triggerForField("#shipping_address_1", "#shipping-address_1");
+      triggerForField("#shipping_address_2", "#shipping-address_2");
+      triggerForField("#shipping_city", "#shipping-city");
+      triggerForField("#shipping_postcode", "#shipping-postcode");
+    }
     if (this.customRegion) {
       // Trigger events on the custom region element (only one selector assumed here)
       if (this.customRegion.dispatchEvent) {
@@ -2118,14 +2219,6 @@ https://github.com/AbleTech/neat-complete/blob/develop/LICENSE.md
         });
       });
   
-  
-      jQuery(document.body).on('updated_checkout', function () {
-          // Reapply values from local storage
-          //console.log('updated_checkout called');
-  
-          //document.getElementById('shipping-line1').value = localStorage.getItem('shipping_line1');
-      });
-  
       initAddy(); // Initialize if elements are detected
       console.info("Addy plugin initialized successfuly.");
       return;
@@ -2135,10 +2228,59 @@ https://github.com/AbleTech/neat-complete/blob/develop/LICENSE.md
       }, 1000);
     }
   }
+
+    function loadAddyWidget(prefix) {
+        let field = getElementByIdVariations(prefix, "address_1");
+
+        if (!field) {
+            console.warn("Address text field wasn't found for prefix:", prefix);
+            return;
+        }
+
+        // Prevent double init on the same input
+        if (field.dataset.addyInitialised === "1") {
+            return;
+        }
+        field.dataset.addyInitialised = "1";
+
+        initAddy();
+    }
+
+  function observeCheckoutRerenders() {
+    // Try to find the checkout block root
+    var root =
+        document.querySelector(".wp-block-woocommerce-checkout") ||
+        document.querySelector(".wc-block-checkout");
+
+    if (!root) {
+        // No checkout block on this page
+        return;
+    }
+
+    var observer = new MutationObserver(function (mutationsList) {
+        // Every time DOM under checkout changes, check if we have a fresh billing/shipping field
+
+        var billingField = getElementByIdVariations("billing", "address_1");
+        if (billingField && billingField.dataset.addyInitialised !== "1") {
+            loadAddyWidget("billing");
+        }
+
+        // var shippingField = getElementByIdVariations("shipping", "address_1");
+        // if (shippingField && shippingField.dataset.addyInitialised !== "1") {
+        //     loadAddyWidget("shipping");
+        // }
+    });
+
+    observer.observe(root, {
+        childList: true,
+        subtree: true
+    });
+    }
   
   (function () {
     jQuery(document).ready(function () {
       initAddyDomLoad(6);
+      observeCheckoutRerenders(); 
     });
   })();
   
