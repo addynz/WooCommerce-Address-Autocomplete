@@ -1,3 +1,7 @@
+# NZ Address Autocomplete for WooCommerce 3.1.2 
+- Resolved an issue where Billing and Shipping address fields were populated with identical data
+- Enhanced data synchronization and improved plugin behaviour when the component becomes unsubscribed due to Rack WP rendering
+
 # NZ Address Autocomplete for WooCommerce 3.1.1 
 - Addy plugin minor metadata fix
 
