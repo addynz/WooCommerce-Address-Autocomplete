@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Addy's NZ Address Autocomplete for WooCommerce
-Version: 3.0.0
+Version: 3.1.3
 Author: Addy Limited
 Author URI: https://www.addysolutions.com
 Description: Address autocomplete will validate and suggest addresses as a user types to make online checkouts fast, easy and accurate. 
